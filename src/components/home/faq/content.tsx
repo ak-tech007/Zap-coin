@@ -84,7 +84,7 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq4"?"h-[30vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] !p-[2vw] bg-[#6DEDFE]`}>
+        <div className={`${show==="faq4"?"h-[32vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] !p-[2vw] bg-[#6DEDFE]`}>
           <button
             className={`${
               show === "faq4" ? "text-[1.4vw]":"text-[1.1vw]"
