@@ -5,8 +5,8 @@ export const Content = () => {
   const [show, setShow] = useState<String>("faq1");
   return (
     <>
-      <div className="absolute  top-0 left-[15%] right-[16%] bottom-[4%] flex flex-col justify-between gap-[1vw]">
-        <div className={`${show==="faq1"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+      <div className="absolute  top-0 left-[15%] right-[16%] bottom-[4%] flex flex-col justify-between gap-[1.3vw]">
+        <div className={`${show==="faq1"?"h-full":"h-[7.5vw]"} duration-500 overflow-hidden border-[8px] border-black rounded-[1vw] p-[2vw] bg-[#6DEDFE]`}>
           <button
             className={`${
               show === "faq1" ? "text-[1.4vw]":"text-[1.1vw]"
@@ -32,7 +32,7 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq2"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+        <div className={`${show==="faq2"?"h-full":"h-[7.5vw]"} duration-500 overflow-hidden border-[8px] border-black rounded-[1vw] p-[2vw] bg-[#6DEDFE]`}>
           <button
             className={`${
               show === "faq2" ? "text-[1.4vw]":"text-[1.1vw]"
@@ -58,7 +58,7 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq3"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+        <div className={`${show==="faq3"?"h-full":"h-[7.5vw]"} duration-500 overflow-hidden border-[8px] border-black rounded-[1vw] p-[2vw] bg-[#6DEDFE]`}>
           <button
             className={`${
               show === "faq3" ? "text-[1.4vw]":"text-[1.1vw]"
@@ -84,7 +84,7 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq4"?"h-[30vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] !p-[2vw] bg-[#6DEDFE]`}>
+        <div className={`${show==="faq4"?"h-full":"h-[7.5vw]"} duration-500 overflow-hidden border-[8px] border-black rounded-[1vw] p-[2vw] bg-[#6DEDFE]`}>
           <button
             className={`${
               show === "faq4" ? "text-[1.4vw]":"text-[1.1vw]"
