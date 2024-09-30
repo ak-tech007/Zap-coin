@@ -13,7 +13,7 @@ export const Faq = () => {
             className=""
           />
           <Content />
-          <div>aaaa</div>
+          <div>dev1</div>
         </div>
       </div>
     </>
