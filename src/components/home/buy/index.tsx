@@ -12,8 +12,8 @@ export const Buy = () => {
           <div
             className="absolute top-[20%] left-[23%] right-[23%] bottom-[30%] flex flex-col justify-between text-[1.3vw] text-white font-sans font-[900] scale-y-125 leading-[1.6vw] pt-[2vw] pb-[4vw]"
             style={{
-              textShadow:
-                "0.1vw 0.1vw 0 #080807, -0.1vw -0.1vw 0 #080807, -0.1vw 0.1vw 0 #080807, 0.1vw -0.1vw 0 #080807",
+              // textShadow:
+              // "0.1vw 0.1vw 0 #080807, -0.1vw -0.1vw 0 #080807, -0.1vw 0.1vw 0 #080807, 0.1vw -0.1vw 0 #080807",
               WebkitTextStroke: "0.1vw #080807",
             }}
           >
