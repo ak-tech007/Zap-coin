@@ -48,6 +48,9 @@ export const Tokenpayment = () => {
                 <input type="number" placeholder="0" className="myriadpro outline-none bg-transparent border-0 text-[1.1vw] p-0 w-[30%]"></input>
                 <input type="number" value={`0`} readOnly className="w-[38%] outline-none bg-transparent border-0 myriadpro p-0 text-[1.1vw]"></input>
             </div>
+            <div>
+                aaaa
+            </div>
         </div>
         </>
     )
