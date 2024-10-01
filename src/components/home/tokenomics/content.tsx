@@ -47,6 +47,7 @@ export const Content = () => {
         />
         <h1
           className="absolute top-[20%] left-[5%] text-[2vw] "
+          style={{WebkitTextStroke:"2px white"}}
       
         >
           The engine that makes the $ZAP machine run.
