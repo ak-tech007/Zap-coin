@@ -19,7 +19,7 @@ export const Tokenpayment = () => {
                 <label className="mr-[2.2vw] myriadpro">00</label>
                 <label className="mr-[1vw] myriadpro">00</label>
             </div>
-            <span className="absolute myriadpro_regular top-[25.4%] text-[0.7vw] text-white left-[12.9%]">Until next Price increase</span>
+            <span className="absolute myriadpro_regular top-[25.2%] text-[0.7vw] text-white left-[12.9%]">Until next Price increase</span>
             <div className="absolute top-[38%] left-[12.3%] text-[0.8vw]">
                 <span className="myriadpro">Your purchased $ZAP = </span>
                 <span className="myriadpro">0</span>
@@ -28,7 +28,7 @@ export const Tokenpayment = () => {
                 <span className="myriadpro">Your stakeable $ZAP = </span>
                 <span className="myriadpro">0</span>
             </div>
-            <div className="absolute top-[45.5%] left-[13.5%] text-[0.8vw]">
+            <div className="absolute top-[45.3%] left-[13.5%] text-[0.8vw]">
                 <span className="myriadpro">1 $ZAP = </span>
                 <span className="myriadpro">$0.0098</span>
             </div>
@@ -36,19 +36,28 @@ export const Tokenpayment = () => {
                 <img className="cursor-pointer rounded-[3rem] w-[47%] hover:shadow-3xl" src="button/ETH.png"></img>
                 <img className="cursor-pointer rounded-[3rem] w-[47%] hover:shadow-3xl" src="button/USDT.png"></img>
             </div>
-            <div className="absolute top-[63%] left-[8.5%] text-[0.6vw]">
+            <div className="absolute top-[62%] left-[8.5%] text-[0.6vw]">
                 <span className="myriadpro mr-[6vw]">Pay with ETH</span>
                 <span className="myriadpro">$ZAP You receive</span>
             </div>
-            <div className="absolute flex justify-between w-[17%] top-[66%] left-[8%] text-[0.6vw]">
+            <div className="absolute flex justify-between w-[17%] top-[65%] left-[8%] text-[0.6vw]">
                 <img src="button/input1.png" className="w-[45%]"></img>
                 <img src="button/input2.png" className="w-[45%]"></img>
             </div>
-            <div className="absolute flex justify-between w-[15%] top-[66.35%] left-[9%] text-[0.6vw]">
+            <div className="absolute flex justify-between w-[15%] top-[65.35%] left-[9%] text-[0.6vw]">
                 <input type="number" placeholder="0" className="myriadpro outline-none bg-transparent border-0 text-[1.1vw] p-0 w-[30%]"></input>
                 <input type="number" value={`0`} readOnly className="w-[38%] outline-none bg-transparent border-0 myriadpro p-0 text-[1.1vw]"></input>
             </div>
-            
+            <div className="absolute flex justify-between w-[17%] top-[72%] left-[8%] text-[0.75vw]">
+                <div className="myriadpro relative py-[0.35vw] rounded-[1rem] w-[45%]">
+                    <img src="button/button1.png"></img>
+                    <span className="absolute top-[20%] left-[2%] px-[15%] py-[3%] rounded-[2rem] cursor-pointer hover:bg-[#1a82ab]">Connect Wallet</span>
+                </div>
+                <div className="myriadpro relative py-[0.35vw] rounded-[1rem] w-[45%]">
+                    <img src="button/button1.png"></img>
+                    <span className="absolute top-[20%] left-[2%] px-[9%]  py-[3%] rounded-[2rem] cursor-pointer hover:bg-[#1a82ab]">Don't Have Wallet</span>
+                </div>
+            </div>
         </div>
         </>
     )
