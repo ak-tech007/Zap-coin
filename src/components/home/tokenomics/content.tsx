@@ -46,7 +46,7 @@ export const Content = () => {
           className={"top-[57%] left-[70%]"}
         />
         <h1
-          className="absolute top-[20%] left-[5%] text-[2vw] font-serif "
+          className="absolute top-[20%] left-[5%] text-[2vw] font-mono "
       
         >
           The engine that makes the $ZAP machine run.
