@@ -45,10 +45,10 @@ export const Controller = () => {
       setShowItem(true);
     }
     if (!isInsideBtn) {
-      if (isInsideItem) {        
-        return;
-      }
       setTimeout(() => {
+        if (isInsideItem) {
+          return;
+        }
         setShowItem(false);
       }, 2000);
     }
@@ -73,7 +73,7 @@ export const Controller = () => {
           <button
             onMouseEnter={() => setIsInsideBtn(true)}
             onMouseLeave={() => setIsInsideBtn(false)}
-            onClick={() => scrollToSection("About")}
+            onClick={() => scrollToSection("Home")}
             className="  animate-bounce bg-white dark:bg-slate-800 p-[0.4vw] w-[2.5vw] h-[2.5vw] ring-4 ring-slate-900/30 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center"
           >
             <svg

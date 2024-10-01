@@ -1,3 +1,4 @@
+"use client";
 import { Item } from "./item";
 
 export const Content = () => {
@@ -46,19 +47,24 @@ export const Content = () => {
           className={"top-[57%] left-[70%]"}
         />
         <h1
-          className="absolute top-[20%] left-[5%] text-[2vw] "
-          style={{WebkitTextStroke:"2px white"}}
-      
+          className="absolute top-[20%] left-[5%] text-[2vw] font-bold "
+          style={{
+            // WebkitTextStroke: "2px white",
+            textShadow:
+              "0.1vw 0.1vw 0 white, -0.1vw -0.1vw 0 white, -0.1vw 0.1vw 0 white, 0.1vw -0.1vw 0 white",
+          }}
         >
           The engine that makes the $ZAP machine run.
         </h1>
         <p className="absolute bottom-[15%] left-[8%] text-[1.5vw] font-semibold">
           Total Token Amount: 8,000,000,000
         </p>
-        <button className="text-[#073736] absolute bottom-[18%] right-[5%] text-[1.1vw] font-semibold hover:-translate-y-[0.1vw]">
+        <button
+          onClick={() => window.open("/white-paper.pdf")}
+          className="text-[#073736] absolute bottom-[18%] right-[5%] text-[1.1vw] font-semibold hover:-translate-y-[0.1vw]"
+        >
           Read $ZAP Whitepaper
         </button>
-        
       </div>
     </>
   );

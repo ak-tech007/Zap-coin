@@ -2,10 +2,11 @@ export const Content = () => {
   return (
     <>
       <div
-        className="absolute top-[15%] left-[30%] text-white  font-bold font-sans"
+        className="absolute top-[15%] left-[30%] text-white  font-extrabold font-sans z-10"
         style={{
-          textShadow:
-            "0.1vw 0.1vw 0 black, -0.1vw -0.1vw 0 black, -0.1vw 0.1vw 0 black, 0.1vw -0.1vw 0 black",
+          WebkitTextStroke: "0.1vw black",
+          // textShadow:
+          //   "0.1vw 0.1vw 0 black, -0.1vw -0.1vw 0 black, -0.1vw 0.1vw 0 black, 0.1vw -0.1vw 0 black",
         }}
       >
         <img src={`/title/title1.png`} className="w-[20%] ml-[2%] pb-[0.3%]" />

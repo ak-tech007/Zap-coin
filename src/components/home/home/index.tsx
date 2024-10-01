@@ -9,7 +9,7 @@ const Home = () => {
   const router = useRouter();
   return (
     <>
-      <div className=" relative ">
+      <div id="Home" className=" relative ">
         <img src="/bg/stacking.jpg" className="w-full" />
         <div className="absolute flex  top-[3.5%] left-[20%] gap-[1.5vw] ">
           <NavButton label="Stacking" />
