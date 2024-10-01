@@ -4,6 +4,7 @@ import { Faq } from "@/components/home/faq";
 import { Roadmap } from "@/components/home/roadmap";
 import Stacking from "@/components/home/home/index";
 import { Tokenomics } from "@/components/home/tokenomics";
+import { Controller } from "@/components/home/controller";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Roadmap />
       <Faq />
       <Buy />
+      <Controller />
     </>
   );
 };
