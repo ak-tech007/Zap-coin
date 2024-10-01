@@ -1,10 +1,12 @@
+import { Content } from "./content";
+
 export const About = () => {
   return (
     <>
-      <div className=" relative -mt-[1vw] -z-10">
-        <img src="/bg/about.png" className="w-full " />
-        <div id="About" className=" absolute top-[5%] "></div>
-        <div id="Tokenomics" className=" absolute top-[48%] "></div>
+      <div id="About" className="relative mt-[4.5vw]">
+        <img src="/bg/about.jpg" className="w-full " />
+        <img src="/bg/dress1.png" className="w-full absolute -top-[9%] " />
+        <Content />
       </div>
     </>
   );
