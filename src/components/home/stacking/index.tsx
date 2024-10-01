@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { NavButton } from "./navButton";
 import { Content } from "./content";
+import { Tokenpayment } from "./tokenpayment";
 
 const Stacking = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ const Stacking = () => {
           />
         </div>
         <Content />
+        <Tokenpayment></Tokenpayment>
         <button className="w-[8vw] h-[5.5vw] absolute top-[1%] left-[10%]"></button>
       </div>
     </>
