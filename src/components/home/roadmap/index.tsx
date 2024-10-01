@@ -1,13 +1,14 @@
 export const Roadmap = () => {
   return (
     <>
-      <div className=" relative -mt-[12vw] ">
+      <div className="relative mt-[9.5vw] ">
         <img src="/bg/roadmap.jpg" className="w-full " />
+        <img src="/bg/dress2.png" className="w-full absolute -top-[17%] " />
         <div
           id="Roadmap"
-          className=" w-[70vw] absolute top-0 z-10 left-[15vw] text-[#073736] "
+          className=" w-[70vw] absolute top-[3%] left-[15vw] text-[#073736] "
         >
-          <img src="/bg/roadmap.png" />
+          <img src="/bg/roadmap.png"  />
           <div className="absolute top-[11%] left-[10%] right-[15%]">
             <h1 className="text-[1.7vw] font-bold ">
               Step 1 - Make Pepe Great Again

@@ -6,10 +6,14 @@ export const Content = () => {
   return (
     <>
       <div className="absolute  top-0 left-[15%] right-[16%] bottom-[4%] flex flex-col justify-between gap-[1vw]">
-        <div className={`${show==="faq1"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+        <div
+          className={`${
+            show === "faq1" ? "h-[22vw]" : "h-[5.5vw]"
+          } duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}
+        >
           <button
             className={`${
-              show === "faq1" ? "text-[1.4vw]":"text-[1.1vw]"
+              show === "faq1" ? "text-[1.4vw]" : "text-[1.1vw]"
             } font-bold cursor-pointer`}
             onClick={() => setShow("faq1")}
           >
@@ -32,10 +36,14 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq2"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+        <div
+          className={`${
+            show === "faq2" ? "h-[22vw]" : "h-[5.5vw]"
+          } duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}
+        >
           <button
             className={`${
-              show === "faq2" ? "text-[1.4vw]":"text-[1.1vw]"
+              show === "faq2" ? "text-[1.4vw]" : "text-[1.1vw]"
             } font-bold cursor-pointer`}
             onClick={() => setShow("faq2")}
           >
@@ -58,10 +66,14 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq3"?"h-[22vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}>
+        <div
+          className={`${
+            show === "faq3" ? "h-[22vw]" : "h-[5.5vw]"
+          } duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}
+        >
           <button
             className={`${
-              show === "faq3" ? "text-[1.4vw]":"text-[1.1vw]"
+              show === "faq3" ? "text-[1.4vw]" : "text-[1.1vw]"
             } font-bold cursor-pointer`}
             onClick={() => setShow("faq3")}
           >
@@ -84,10 +96,14 @@ export const Content = () => {
             </ul>
           )}
         </div>
-        <div className={`${show==="faq4"?"h-[32vw]":"h-[5.5vw]"} duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] !p-[2vw] bg-[#6DEDFE]`}>
+        <div
+          className={`${
+            show === "faq4" ? "h-[30vw]" : "h-[5.5vw]"
+          } duration-500 overflow-hidden border-[0.5vw] border-black rounded-[1vw] p-[1.5vw] bg-[#6DEDFE]`}
+        >
           <button
             className={`${
-              show === "faq4" ? "text-[1.4vw]":"text-[1.1vw]"
+              show === "faq4" ? "text-[1.4vw]" : "text-[1.1vw]"
             } font-bold cursor-pointer`}
             onClick={() => setShow("faq4")}
           >

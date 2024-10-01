@@ -6,7 +6,7 @@ export const Buy = () => {
         <img src="/bg/dress4.png" className="w-full absolute -top-[9vw] " />
         <div
           id="How To Buy"
-          className=" w-[60vw] absolute top-[7vw] z-10 left-[20vw] text-[#073736] "
+          className=" w-[60vw] absolute top-[7vw]  left-[20vw] text-[#073736] "
         >
           <img src="/bg/buy.png" />
           <div

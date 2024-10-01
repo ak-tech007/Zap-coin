@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter} from "next/font/google";
 import dynamic from "next/dynamic";
 const JotaiProvider = dynamic(() => import("@/providers/jotaiProvider"), {
   ssr: false,
