@@ -31,3 +31,42 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro/MyriadPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro/MyriadPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.myriadpro {
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: bold;
+}
+
+.myriadpro_regular {
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: normal;
+}
+
+.payment {
+  background-image: url("../../public/bg/payment.png");
+}
+
+input::placeholder {
+  color: black; /* Set the desired placeholder color */
+  opacity: 1;     /* Optional: control the opacity of the placeholder */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none; /* Remove default appearance */
+            margin: 0;                /* Remove margin */
+        }
