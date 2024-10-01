@@ -8,7 +8,7 @@ export const Buy = () => {
           id="How To Buy"
           className=" w-[60vw] absolute top-[7vw]  left-[20vw] text-[#073736] "
         >
-          <img src="/bg/buy.png" />
+          <img src="/bg/buy.png" id="HowToBuy" />
           <div
             className="absolute top-[20%] left-[23%] right-[23%] bottom-[30%] flex flex-col justify-between text-[1.3vw] text-white font-sans font-[900] scale-y-125 leading-[1.6vw] pt-[2vw] pb-[4vw]"
             style={{
