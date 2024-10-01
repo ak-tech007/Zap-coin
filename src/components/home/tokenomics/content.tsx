@@ -46,7 +46,7 @@ export const Content = () => {
           className={"top-[57%] left-[70%]"}
         />
         <h1
-          className="absolute top-[20%] left-[5%] text-[2vw] font-mono font-semibold "
+          className="absolute top-[20%] left-[5%] text-[2vw] "
       
         >
           The engine that makes the $ZAP machine run.
@@ -57,6 +57,7 @@ export const Content = () => {
         <button className="text-[#073736] absolute bottom-[18%] right-[5%] text-[1.1vw] font-semibold hover:-translate-y-[0.1vw]">
           Read $ZAP Whitepaper
         </button>
+        
       </div>
     </>
   );
