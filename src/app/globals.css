@@ -33,26 +33,26 @@ body {
 }
 
 @font-face {
-  font-family: 'Myriad Pro';
-  src: url('/fonts/MyriadPro/MyriadPro-Regular.otf') format('opentype');
+  font-family: "Myriad Pro";
+  src: url("/fonts/MyriadPro/MyriadPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Myriad Pro';
-  src: url('/fonts/MyriadPro/MyriadPro-Bold.otf') format('opentype');
+  font-family: "Myriad Pro";
+  src: url("/fonts/MyriadPro/MyriadPro-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 .myriadpro {
-  font-family: 'Myriad Pro', sans-serif;
+  font-family: "Myriad Pro", sans-serif;
   font-weight: bold;
 }
 
 .myriadpro_regular {
-  font-family: 'Myriad Pro', sans-serif;
+  font-family: "Myriad Pro", sans-serif;
   font-weight: normal;
 }
 
@@ -62,12 +62,28 @@ body {
 
 input::placeholder {
   color: black; /* Set the desired placeholder color */
-  opacity: 1;     /* Optional: control the opacity of the placeholder */
+  opacity: 1; /* Optional: control the opacity of the placeholder */
 }
 
-input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none; /* Remove default appearance */
-            margin: 0;                /* Remove margin */
-        }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Remove default appearance */
+  margin: 0; /* Remove margin */
+}
 
+@media (min-width: 640px) {
+  .home {
+    background-image: url("/bg/home.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+  }
+}
+@media (max-width: 640px) {
+  .home {
+    background-image: url("/bg/home_m.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

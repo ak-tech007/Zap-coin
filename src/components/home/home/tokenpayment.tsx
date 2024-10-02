@@ -4,7 +4,7 @@
 export const Tokenpayment = () => {
     return(
         <>
-        <div className="absolute top-[20%] " >
+        <div className="absolute w-[] top-[20%] " >
             <img className="w-[33%]" src="bg/payment.png"></img>
             <img className="absolute w-[10%] top-[10.3%] left-[11.5%]" src="title/buyzap.png"></img>
             <div className="absolute top-[16%] left-[10%] text-[1vw]">

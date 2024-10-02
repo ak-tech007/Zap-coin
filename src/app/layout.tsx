@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 const JotaiProvider = dynamic(() => import("@/providers/jotaiProvider"), {
   ssr: false,
 });
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-800 relative`}>
-        <JotaiProvider>{children}</JotaiProvider>
+        <JotaiProvider>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </JotaiProvider>
       </body>
     </html>
   );
 }
+

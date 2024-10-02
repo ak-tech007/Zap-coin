@@ -14,14 +14,14 @@ export const Item = ({ label }: { label: string }) => {
         <div
           onMouseEnter={() => setShow(label)}
           onMouseLeave={() => setShow("")}
-          className="rounded-full w-[0.4vw] h-[0.4vw] bg-indigo-900 relative m-[0.6vw]"
+          className="rounded-full w-2 h-2 bg-indigo-900 relative m-2"
         >
           <div
             className={`${
               show === label
-                ? "px-[0.8vw] py-[0.1vw] rounded-[0.5vw] bg-indigo-600 "
+                ? "px-2 py-1 rounded-md bg-indigo-600 "
                 : "w-0"
-            } overflow-hidden duration-100 absolute right-[0.5vw] -top-[0.6vw] h-[1.5vw] text-white font-semibold text-right `}
+            } overflow-hidden duration-100 absolute right-3 -top-3 h-8 text-white font-semibold text-right `}
           >
             {label}
           </div>
