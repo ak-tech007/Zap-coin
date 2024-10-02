@@ -1,11 +1,15 @@
+import { navHiddenAtom } from "@/store";
+import { useAtom } from "jotai";
+
 interface Type {
   label: string;
 }
 export const NavButton: React.FC<Type> = ({ label }) => {
+  const [, setShow] = useAtom<boolean>(navHiddenAtom);
   const scrollToSection = (label: string) => {
     if (label === "White Paper") {
       window.open("/white-paper.pdf");
-      return
+      return;
     }
     const element = document.getElementById(label);
     if (element) {
@@ -15,8 +19,11 @@ export const NavButton: React.FC<Type> = ({ label }) => {
   return (
     <>
       <button
-        className={`font-[Thomas,cursive] text-[1.6vw] font-semibold hover:text-lime-500`}
-        onClick={() => scrollToSection(label)}
+        className={`font-[Thomas,cursive] text-[28px] max-[1700px]:text-[24px] font-semibold hover:text-lime-500`}
+        onClick={() => {
+          scrollToSection(label);
+          setShow(false);
+        }}
       >
         {label}
       </button>

@@ -1,17 +1,23 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { NavButton } from "./navButton";
 import { Content } from "./content";
 import { Tokenpayment } from "./tokenpayment";
-import bg from "./stacking.jpg";
+import { HiddenBar } from "./hiddenBar";
+import { LinkIcon } from "./linkIcon";
+import { useAtom } from "jotai";
+import { navHiddenAtom } from "@/store";
+import { MenuIcon } from "./menuIcon";
 
 const Home = () => {
-  const router = useRouter();
+  const [, setShow] = useAtom<boolean>(navHiddenAtom);
   return (
     <>
-      <div id="Home" className=" relative ">
-        <img src="/bg/stacking.jpg" className="w-full" />
-        <div className="absolute flex  top-[3.5%] left-[20%] gap-[1.5vw] ">
+      <div id="Home" className=" relative h-svh home">
+        <img
+          src="/bg/zap.png"
+          className=" absolute top-[1%] left-[5%] w-[200px] cursor-pointer"
+        />
+        <div className="absolute flex flex-wrap  top-[3.5%] left-[23%] right-[10%] gap-[1.5vw] max-[1700px]:hidden  ">
           <NavButton label="Stacking" />
           <NavButton label="About" />
           <NavButton label="How To Buy" />
@@ -20,20 +26,14 @@ const Home = () => {
           <NavButton label="FWB" />
           <NavButton label="FAQs" />
           <NavButton label="White Paper" />
-          <img
-            src="/icon/TIcon.png"
-            className="w-[3vw] h-[3vw] cursor-pointer hover:scale-105"
-            onClick={() => router.push("https://web.telegram.org")}
-          />
-          <img
-            src="/icon/XIcon.png"
-            className="w-[3vw] h-[3vw] cursor-pointer hover:scale-105"
-            onClick={() => router.push("https://web.telegram.org")}
-          />
+        </div>
+        <MenuIcon />
+        <HiddenBar />
+        <div className=" absolute top-7 right-14 flex gap-2 max-sm:hidden">
+          <LinkIcon />
         </div>
         <Content />
         <Tokenpayment></Tokenpayment>
-        <button className="w-[8vw] h-[5.5vw] absolute top-[1%] left-[10%]"></button>
       </div>
     </>
   );
