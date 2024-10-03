@@ -5,10 +5,10 @@ export const Tokenpayment = () => {
         <img className="w-[600px]" src="bg/payment.png"></img>
       </div> */}
 
-<div className="min-[1024px]:absolute relative md:scale-125  w-[32rem] 2xl:w-[35rem] top-[20%] " >
-            <img className="w-[100%]" src="bg/payment.png"></img>
+<div className="lg:absolute relative min-[522px]:w-[32rem] min-[522px]:scale-100 md:scale-125 lg:scale-100 2xl:w-[35rem] top-[20%] converttobackground" >
+            <img className="w-[100%] hiddenimg" src="bg/payment.png"></img>
             <img className="absolute w-[28%] top-[10.5%] left-[37.5%] 2xl:w-[28%] 2xl:top-[10.5%] 2xl:left-[37.5%]" src="title/buyzap.png"></img>
-            <div className="absolute flex justify-between w-[41%] top-[16%] left-[30%] text-[1rem] 2xl:w-[41%] 2xl:top-[16%] 2xl:left-[30%] 2xl:text-[1rem]">
+            <div className="absolute flex justify-between max-[522px]:left-[25%] w-[41%] top-[16%] left-[30%] text-[1rem] 2xl:w-[41%] 2xl:top-[16%] 2xl:left-[30%] 2xl:text-[1rem]">
                 <span className="myriadpro">Days</span>
                 <span className="myriadpro">Hours</span>
                 <span className="myriadpro">Minutes</span>
@@ -37,19 +37,19 @@ export const Tokenpayment = () => {
                 <img className="cursor-pointer rounded-[3rem] w-[47%] 2xl:w-[47%] hover:shadow-3xl" src="button/ETH.png"></img>
                 <img className="cursor-pointer rounded-[3rem] w-[47%] 2xl:w-[47%] hover:shadow-3xl" src="button/USDT.png"></img>
             </div>
-            <div className="absolute top-[62%] left-[26.5%] text-[0.8rem] 2xl:top-[62%] 2xl:left-[26.5%] 2xl:text-[0.9rem]">
-                <span className="myriadpro mr-[4.5rem] 2xl:mr-[5rem]">Pay with ETH</span>
+            <div className="absolute max-[522px]:w-[65%] top-[62%] left-[26.5%] text-[0.8rem] 2xl:top-[62%] 2xl:left-[26.5%] 2xl:text-[0.9rem]">
+                <span className="myriadpro max-[522px]:mr-[15%] mr-[4.5rem] 2xl:mr-[5rem]">Pay with ETH</span>
                 <span className="myriadpro">$ZAP You receive</span>
             </div>
             <div className="absolute flex justify-between w-[52%] top-[66%] left-[24%] 2xl:w-[52%] 2xl:top-[66%] 2xl:left-[24%] 2xl:text-[3rem]">
                 <img src="button/input1.png" className="w-[45%]"></img>
                 <img src="button/input2.png" className="w-[45%]"></img>
             </div>
-            <div className="absolute flex justify-between w-[46%] top-[66.4%] left-[27%] 2xl:w-[46%] 2xl:top-[66.25%] 2xl:left-[27%]">
+            <div className="absolute flex justify-between w-[46%] max-[522px]:top-[65.5%] top-[66.4%] left-[27%] 2xl:w-[46%] 2xl:top-[66.25%] 2xl:left-[27%]">
                 <input type="number" placeholder="0" className="myriadpro outline-none bg-transparent border-0 text-[1.1rem] w-[30%] 2xl:text-[1.2rem] p-0 2xl:w-[30%]"></input>
                 <input type="number" value={`0`} readOnly className=" outline-none bg-transparent border-0 myriadpro p-0 text-[1.1rem] w-[38%] 2xl:text-[1.2rem] 2xl:w-[38%]"></input>
             </div>
-            <div className="absolute flex justify-between w-[52%] top-[74%] left-[24%] text-[0.76rem] 2xl:w-[52%] 2xl:top-[74%] 2xl:left-[24%] 2xl:text-[0.8rem]">
+            <div className="absolute flex justify-between max-[522px]:text-[0.6rem] w-[52%] top-[74%] left-[24%] text-[0.76rem] 2xl:w-[52%] 2xl:top-[74%] 2xl:left-[24%] 2xl:text-[0.8rem]">
                 <div className="myriadpro relative rounded-[1rem] w-[45%]">
                     <img src="button/button1.png"></img>
                     <span className="absolute cursor-pointer hover:bg-[#1a82ab] top-[9%] left-[2%] px-[14%] py-[2.7%] 2xl:top-[10%] 2xl:left-[2%] 2xl:px-[15%] 2xl:py-[3%]  rounded-[2rem]">Connect Wallet</span>
