@@ -88,6 +88,30 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 1500px;
   }
 }
+
+@media (max-width: 522px) {
+  .hiddenimg {
+    display: none;
+  }
+  .converttobackground {
+    width: 100%;
+    height: 500px;
+    background-image: url("/bg/payment.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 130% 100%;
+  }
+}
+
+@media (min-width: 522px) {
+  .hiddenimg {
+    display: block;
+  }
+  .converttobackground {
+
+  }
+}
+
 /* .dress1 {
   background-image: url("/bg/dress1.png");
   background-repeat: no-repeat;
