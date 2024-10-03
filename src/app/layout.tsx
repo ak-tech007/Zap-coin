@@ -5,8 +5,6 @@ const JotaiProvider = dynamic(() => import("@/providers/jotaiProvider"), {
   ssr: false,
 });
 import "./globals.css";
-import { Suspense } from "react";
-import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-gray-800 relative`}>
         <JotaiProvider>
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+        {children}
         </JotaiProvider>
       </body>
     </html>

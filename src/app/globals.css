@@ -85,7 +85,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1500px;
+    height: 1450px;
   }
 }
 
@@ -119,11 +119,8 @@ input[type="number"]::-webkit-outer-spin-button {
   background-size: cover;
 } */
 .about_token {
-  background-image: url("/bg/about_token.png");
+  background-image: url("/bg/about_token.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-
-
