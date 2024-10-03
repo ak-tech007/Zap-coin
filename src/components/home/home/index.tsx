@@ -12,7 +12,7 @@ const Home = () => {
   const [, setShow] = useAtom<boolean>(navHiddenAtom);
   return (
     <>
-      <div id="Home" className=" relative h-svh home">
+      <div id="Home" className=" relative h-[110vh] home">
         <img
           src="/bg/zap.png"
           className=" absolute top-[10px] left-[5%] w-[200px] cursor-pointer"
@@ -36,7 +36,7 @@ const Home = () => {
         <div className=" absolute top-7 right-14 flex gap-2 max-sm:hidden">
           <LinkIcon />
         </div>
-        <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-20 w-full max-[1024px]:pt-48 max-md:pt-28 ">
+        <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-10 w-full max-[1024px]:pt-28  ">
           <Tokenpayment />
           <Content />
         </div>

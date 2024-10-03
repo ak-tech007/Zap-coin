@@ -5,7 +5,7 @@ export const Tokenpayment = () => {
         <img className="w-[600px]" src="bg/payment.png"></img>
       </div> */}
 
-<div className="min-[1200px]:absolute relative w-[32rem] 2xl:w-[35rem] top-[20%] " >
+<div className="min-[1024px]:absolute relative md:scale-125  w-[32rem] 2xl:w-[35rem] top-[20%] " >
             <img className="w-[100%]" src="bg/payment.png"></img>
             <img className="absolute w-[28%] top-[10.5%] left-[37.5%] 2xl:w-[28%] 2xl:top-[10.5%] 2xl:left-[37.5%]" src="title/buyzap.png"></img>
             <div className="absolute flex justify-between w-[41%] top-[16%] left-[30%] text-[1rem] 2xl:w-[41%] 2xl:top-[16%] 2xl:left-[30%] 2xl:text-[1rem]">

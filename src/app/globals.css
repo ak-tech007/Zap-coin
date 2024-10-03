@@ -85,21 +85,12 @@ input[type="number"]::-webkit-outer-spin-button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1500px;
+    height: 1450px;
   }
 }
-/* .dress1 {
-  background-image: url("/bg/dress1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
 .about_token {
-  background-image: url("/bg/about_token.png");
+  background-image: url("/bg/about_token.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-
-
