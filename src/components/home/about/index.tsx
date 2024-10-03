@@ -8,12 +8,7 @@ export const About = () => {
         />
         <ul
           className=" text-white font-[Tahoma, sans-serif] font-extrabold text-[28px] w-[1000px] max-[1000px]:w-full max-[1000px]:text-[24px] max-sm:text-[18px] scale-y-150 
-          leading-[40px] max-sm:leading-[24px]"
-          style={{
-            // WebkitTextStroke: "0.1vw black",
-            textShadow:
-              "1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black",
-          }}
+          leading-[40px] max-sm:leading-[24px] about_shadow"
         >
           <li className="font-[Thomas,cursive]">
             The future of meme coins. A cross-chain solution built for speed,

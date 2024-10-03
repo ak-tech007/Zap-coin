@@ -36,7 +36,7 @@ const Home = () => {
         <div className=" absolute top-7 right-14 flex gap-2 max-sm:hidden">
           <LinkIcon />
         </div>
-        <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-10 w-full max-[1024px]:pt-28  ">
+        <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-16 max-md:gap-4 w-full max-[1024px]:pt-28 max-md:pt-20   ">
           <Tokenpayment />
           <Content />
         </div>
