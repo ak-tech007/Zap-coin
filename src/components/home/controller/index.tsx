@@ -55,7 +55,7 @@ export const Controller = () => {
   return (
     <>
       {show && (
-        <div className="fixed bottom-[3vw] right-[2vw] flex flex-col items-center gap-[1vw]">
+        <div className="fixed bottom-[3vw] right-[2vw] flex flex-col items-center gap-[10px]">
           {showItem && (
             <div
               onMouseEnter={() => setIsInsideItem(true)}

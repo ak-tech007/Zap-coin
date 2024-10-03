@@ -15,7 +15,11 @@ const Home = () => {
       <div id="Home" className=" relative h-svh home">
         <img
           src="/bg/zap.png"
-          className=" absolute top-[1%] left-[5%] w-[200px] cursor-pointer"
+          className=" absolute top-[10px] left-[5%] w-[200px] cursor-pointer"
+        />
+        <img
+          src="/bg/rabbit.png"
+          className="lg:hidden absolute top-[900px] "
         />
         <div className="absolute flex flex-wrap  top-[3.5%] left-[23%] right-[10%] gap-[1.5vw] max-[1700px]:hidden  ">
           <NavButton label="Stacking" />
@@ -32,8 +36,10 @@ const Home = () => {
         <div className=" absolute top-7 right-14 flex gap-2 max-sm:hidden">
           <LinkIcon />
         </div>
-        <Content />
-        <Tokenpayment></Tokenpayment>
+        <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-20 w-full max-[1024px]:pt-48 max-md:pt-28 ">
+          <Tokenpayment />
+          <Content />
+        </div>
       </div>
     </>
   );
