@@ -4,7 +4,7 @@ import { Item } from "./item";
 export const Tokenomics = () => {
   return (
     <>
-      <div id="Tokenomics" className="absolute top-[55%] mx-[5%] w-[1200px] max-lg:hidden">
+      {/* <div id="Tokenomics" className="absolute top-[55%] mx-[5%] w-[1200px] max-lg:hidden">
         <img src="/bg/tokenomics.png" />
         <Item
           title={"Presale 20%"}
@@ -65,7 +65,7 @@ export const Tokenomics = () => {
         >
           Read $ZAP Whitepaper
         </button>
-      </div>
+      </div> */}
     </>
   );
 };
