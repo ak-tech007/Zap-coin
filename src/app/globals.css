@@ -129,8 +129,14 @@ input[type="number"]::-webkit-outer-spin-button {
   background-size: cover;
 } */
 .about_token {
-  background-image: url("/bg/about_token.jpg");
+  background-image: url("/bg/about_token.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+  background-size: cover;
+}
+.faq {
+  background-image: url("/bg/faq.png");
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
 }

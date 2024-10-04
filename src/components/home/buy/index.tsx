@@ -1,8 +1,10 @@
 export const Buy = () => {
   return (
     <>
-      <div className=" relative mt-[2vw]">
-        <img src="/bg/buy.jpg" className="w-full " />
+      <div className=" relative mt-[2vw]  overflow-hidden flex justify-center items-center">
+        <div className="w-[1200px] flex">
+          <img src="/bg/buy.jpg" className=" min-w-[100vh] mx-auto " />
+        </div>
         <img src="/bg/dress4.png" className="w-full absolute -top-[9vw] " />
         <div
           id="How To Buy"
