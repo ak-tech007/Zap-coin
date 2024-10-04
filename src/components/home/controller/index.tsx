@@ -73,14 +73,14 @@ export const Controller = () => {
             onMouseEnter={() => setIsInsideBtn(true)}
             onMouseLeave={() => setIsInsideBtn(false)}
             onClick={() => scrollToSection("Home")}
-            className="  animate-bounce bg-white dark:bg-slate-800 p-1 w-12 h-12 ring-4 ring-slate-900/30 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center"
+            className="  animate-bounce  bg-slate-800 p-1 w-12 h-12 ring-4 ring-slate-900/30 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center"
           >
             <svg
               className="w-6 h-6 text-violet-500"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
