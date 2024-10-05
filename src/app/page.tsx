@@ -10,6 +10,7 @@ import { About_token } from "@/components/home/about_token";
 const Homepage = () => {
   return (
     <>
+    <div className="relative">
       <Home />
       {/* <About /> */}
       {/* <Tokenomics /> */}
@@ -18,6 +19,7 @@ const Homepage = () => {
       <Faq />
       <Buy />
       <Controller />
+    </div>
     </>
   );
 };

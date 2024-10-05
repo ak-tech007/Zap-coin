@@ -46,6 +46,29 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "proximaNova";
+  src: url("/fonts/proxima/ProximaNova-Bold.ttf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.proximanova {
+  font-family: "proximaNova";
+  font-weight: bold;
+  color: white;
+  text-shadow: 
+  -3px 0px 0px black,  
+  0px -3px 0px black,
+  3px 0px 0px black,
+  0px 3px 0px black,
+  -2px -2px 1px black,
+  2px -2px 1px black,
+ -2px 2px 1px black,
+ 2px 2px 1px black;
+  letter-spacing: 0.1rem;
+}
+
 .myriadpro {
   font-family: "Myriad Pro", sans-serif;
   font-weight: bold;
@@ -138,5 +161,5 @@ input[type="number"]::-webkit-outer-spin-button {
   background-image: url("/bg/faq.png");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
+  background-size: 100% 100%;
 }
