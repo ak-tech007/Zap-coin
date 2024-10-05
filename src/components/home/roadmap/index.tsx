@@ -2,7 +2,7 @@ export const Roadmap = () => {
   return (
     <>
       <div
-        className="relative py-[10rem]"
+        className="relative pt-[5rem] pb-[10rem]"
         style={{
           backgroundImage: "url(/bg/roadmap.jpg)",
           backgroundSize: "cover",
