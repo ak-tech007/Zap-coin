@@ -12,7 +12,7 @@ const Home = () => {
   const [, setShow] = useAtom<boolean>(navHiddenAtom);
   return (
     <>
-      <div id="Home" className=" relative h-[110vh] home">
+      <div id="Home" className=" relative h-[1000px] home">
         <img
           src="/bg/zap.png"
           className=" absolute top-[10px] left-[5%] w-[200px] cursor-pointer"

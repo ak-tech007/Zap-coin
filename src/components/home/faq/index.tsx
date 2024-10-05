@@ -8,9 +8,9 @@ export const Faq = () => {
     <>
       <div
         id="FAQs"
-        className="faq h-[1400px] relative -mt-10 pt-[200px] max-w-[100vw]   lg:pl-[20%] overflow-hidden max-lg:flex justify-center items-center"
+        className="faq relative z-[20] -mt-10 pt-[200px] pb-[200px] lg:pl-[20%] overflow-hidden max-lg:flex justify-center items-center"
       >       
-        <div className="absolute w-[600px] max-lg:w-[500px] max-sm:w-[400px] max-[500px]:w-full max-w-[95%]">
+        <div className=" relative w-[600px] max-lg:w-[500px] max-sm:w-[400px] max-[500px]:w-full max-w-[95%]">
           <Content show={show} setShow={setShow} />
           <img
             src="/bg/faq_dress/faq_dress1-1.png"
