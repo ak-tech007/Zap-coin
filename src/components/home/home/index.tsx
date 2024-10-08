@@ -7,6 +7,7 @@ import { LinkIcon } from "./linkIcon";
 import { useAtom } from "jotai";
 import { navHiddenAtom } from "@/store";
 import { MenuIcon } from "./menuIcon";
+import Form from "../../form"
 
 const Home = () => {
   const [, setShow] = useAtom<boolean>(navHiddenAtom);
@@ -37,7 +38,7 @@ const Home = () => {
           <LinkIcon />
         </div>
         <div className="max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-16 max-md:gap-4 w-full max-[1024px]:pt-28 max-md:pt-20   ">
-          <Tokenpayment />
+          <Form/>
           <Content />
         </div>
       </div>

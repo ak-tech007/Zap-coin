@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import React from 'react'
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
-const JotaiProvider = dynamic(() => import("@/providers/jotaiProvider"), {
+const Provider = dynamic(() => import("@/providers"), {
   ssr: false,
 });
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-800 relative`}>
-        <JotaiProvider>
-        {children}
-        </JotaiProvider>
+        <Provider>
+          {children}
+        </Provider>
       </body>
     </html>
   );
