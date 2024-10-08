@@ -1,3 +1,4 @@
+import Form from '@/components/form'
 export const Buy = () => {
   return (
     <>
@@ -28,6 +29,7 @@ export const Buy = () => {
               or Buy and Stake for max gainz.
             </p>
           </div>
+          
         
       </div>
     </>
