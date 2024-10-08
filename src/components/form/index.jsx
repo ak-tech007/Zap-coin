@@ -9,6 +9,7 @@ import abis from '@/utils/abis.json'
 import { useQuery } from '@tanstack/react-query'
 import { ethers } from 'ethers';
 import BN from 'bignumber.js'
+import moment from 'moment';
 
 function App() {
   const [starsValue, setStarsValue] = useState("0.0014419");
@@ -36,6 +37,25 @@ function App() {
 
   const [isTransferDetected, setIsTransferDetected] = useState(false);
   const [transactionHash, setTransactionHash] = useState(null);
+
+  const [targetDate, setTargetDate] = useState(moment().add(1, 'day')); 
+  const [d, setDays] = useState(0);
+  const [h, setHours] = useState(0);
+  const [m, setMinutes] = useState(0);
+  const [s, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currenttime = moment();
+      const diff = targetDate.diff(currenttime, 'seconds');
+      setDays(Math.floor(diff / 86400));
+      setHours(Math.floor((diff % 86400) / 3600));
+      setMinutes(Math.floor((diff % 3600) / 60));
+      setSeconds(diff % 60);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const receiverAddress = "0x1c38701D43831836937d314F5aA0ea07BB837fbC"; 
 
@@ -242,133 +262,83 @@ function App() {
         }
       });
 
+    
+
+
+
+
 
   };
   
 
   return (
-     <div className="flex-col min-h-screen text-black font-bold p-6">
-      {address && (
-          <div className="flex justify-center ml-auto">
-            <span className="text-lg font-bold mr-2">
-              {parseFloat(balance?.formatted).toFixed(3)} {balance?.symbol}
-            </span>
-            <span className="text-lg font-bold">
-              {address.substring(0, 4)}...{address.substring(38)}
-            </span>
-          </div>
-        )}
-     
-        {/* Main Container */}
-        <div className="w-full max-w-md rounded-3xl border-4 border-black bg-[rgb(111,234,255)] p-6 text-center shadow-xl mx-auto">
-    
-          {/* Header: BUY $STARS IN PRESALE! */}
-          <h2 className="mb-4 text-3xl font-extrabold text-black">BUY $STARS PRESALE!</h2>
+  <>
+    <div className="min-[1024px]:absolute relative md:scale-125  w-[32rem] 2xl:w-[35rem] top-[20%] converttobackground">
+    {/* <div className="lg:absolute relative min-[522px]:w-[32rem] min-[522px]:scale-100 md:scale-125 lg:scale-100 2xl:w-[35rem] top-[20%] converttobackground" > */}
+    <img className="w-[100%] hiddenimg" src="bg/payment.png"></img>
+    <img
+      className="absolute w-[28%] top-[10.5%] left-[37.5%] 2xl:w-[28%] 2xl:top-[10.5%] 2xl:left-[37.5%]"
+      src="title/buyzap.png"
+    ></img>
+    <div className="absolute flex justify-between max-[522px]:left-[25%] w-[41%] top-[16%] left-[30%] text-[1rem] 2xl:w-[41%] 2xl:top-[16%] 2xl:left-[30%] 2xl:text-[1rem]">
+      <span className="myriadpro">Days</span>
+      <span className="myriadpro">Hours</span>
+      <span className="myriadpro">Minutes</span>
+      <span className="myriadpro">Seconds</span>
+    </div>
+    <div className="absolute flex justify-between w-[35%] top-[19.5%] left-[31%] text-[1.3rem] 2xl:w-[35%] 2xl:top-[19.5%] 2xl:left-[31%] 2xl:text-[1.3rem]">
+      <label className="myriadpro">{d}</label>
+      <label className="myriadpro">{h}</label>
+      <label className="myriadpro">{m}</label>
+      <label className="myriadpro">{s}</label>
+    </div>
+    <span className="absolute myriadpro_regular text-white top-[25.3%] text-[0.7rem] left-[39%] 2xl:top-[25.5%] 2xl:text-[0.7rem]  2xl:left-[40%]">
+      Until next Price increase
+    </span>
+    <div className="absolute top-[38%] left-[35.5%] text-[0.85rem] 2xl:top-[38%] 2xl:left-[36.5%] 2xl:text-[0.85rem]">
+      <span className="myriadpro">Your purchased $ZAP = </span>
+      <span className="myriadpro">0</span>
+    </div>
+    <div className="absolute top-[42%] left-[35.5%] text-[0.85rem] 2xl:top-[41%] 2xl:left-[36.5%] 2xl:text-[0.85rem]">
+      <span className="myriadpro">Your stakeable $ZAP = </span>
+      <span className="myriadpro">0</span>
+    </div>
+    <div className="absolute top-[45.5%] left-[41%] text-[0.7rem] 2xl:top-[45.5%] 2xl:left-[41%] 2xl:text-[0.8rem]">
+      <span className="myriadpro">1 $ZAP = </span>
+      <span className="myriadpro">${starsValue}</span>
+    </div>
+    <div className="absolute flex justify-between w-[30%] top-[52%] left-[35%] 2xl:w-[30%] 2xl:top-[52%] 2xl:left-[35%]">
+      <img
+        onClick={() => handleTokenSelection('ETH')}
+        className="cursor-pointer rounded-[3rem] w-[47%] 2xl:w-[47%] hover:shadow-3xl"
+        src="button/ETH.png"
+      ></img>
+      <img
+        onClick={() => handleTokenSelection('USDT')}
+        className="cursor-pointer rounded-[3rem] w-[47%] 2xl:w-[47%] hover:shadow-3xl"
+        src="button/USDT.png"
+      ></img>
+    </div>
+    <div className="absolute max-[522px]:w-[65%] top-[62%] left-[26.5%] text-[0.8rem] 2xl:top-[62%] 2xl:left-[26.5%] 2xl:text-[0.9rem]">
+      <span className="myriadpro max-[522px]:mr-[15%] mr-[4.5rem] 2xl:mr-[5rem]">
+        Pay with ETH
+      </span>
+      <span className="myriadpro">$ZAP You receive</span>
+    </div>
+    <div className="absolute flex justify-between w-[52%] top-[66%] left-[24%] 2xl:w-[52%] 2xl:top-[66%] 2xl:left-[24%] 2xl:text-[3rem]">
+      <img src="button/input1.png" className="w-[45%]"></img>
+      <img src="button/input2.png" className="w-[45%]"></img>
+    </div>
+    <div className="absolute flex justify-between w-[46%] max-[522px]:top-[65.5%] top-[66.4%] left-[27%] 2xl:w-[46%] 2xl:top-[66.25%] 2xl:left-[27%]">
+      <input
+        onChange={handleInputChange}
+        value={inputValue}
+        type="number"
+        placeholder="0"
+        className="myriadpro outline-none bg-transparent border-0 text-[1.1rem] w-[30%] 2xl:text-[1.2rem] p-0 2xl:w-[30%]"
+      ></input>
 
-          {/* Countdown Timer */}
-          <CountdownTimer />
-
-          {/* Funding Progress */}
-          <div className="mb-2 text-2xl font-extrabold">$1,262,656.29 / $1,485,103</div>
-<div className="relative mb-4 h-6 w-full rounded-full bg-[rgb(111,234,255)] border border-black">
-          <div 
-              className="absolute left-0 top-0 h-full rounded-full bg-[rgb(41,139,176)]" 
-              style={{ width: '85%' }}
-            ></div>
-            <div className="absolute inset-0 flex items-center justify-center text-base text-black">
-              UNTIL PRICE INCREASE
-            </div>
-          </div>
-
-
-
-          {/* Token Price */}
-          <div className="flex items-center my-2">
-            <div className="flex-grow border-t-4 border-black"></div>
-            <span className="mx-4 text-lg font-bold">1 $STARS = ${starsValue}</span>
-            <div className="flex-grow border-t-4 border-black"></div>
-        </div>
-
-          {/* Purchased and Stakeable Info */}
-          <div className="mb-4 flex flex-col items-center space-y-2 text-lg">
-          <div className="flex flex-col">
-            <div className="flex flex-row items-center space-x-4">
-              <span className="text-lg font-semibold">YOUR PURCHASED $STARS = 0</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col space-y-2">
-            <div className="flex flex-row items-center space-x-4">
-              <span className="text-lg font-semibold">YOUR STAKEABLE $STARS = 0</span>
-            </div>
-          </div>
-        </div>
-          <div className="flex space-x-4 items-center justify-center px-6 py-3">
-            {/* ETH Button */}
-              <button
-                onClick={() => handleTokenSelection('ETH')}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full border-2 transition-colors ${
-                  selectedToken === 'ETH'
-                    ? 'bg-[#3b82f6] border-transparent' 
-                    : 'bg-white text-[#3b82f6] border-[#3b82f6] hover:bg-[#e5f1ff]' 
-                }`}
-              >
-                <img src="/ETH.svg" alt="ETH Icon" className="w-8 h-8" />
-                <span className="text-2xl font-bold">ETH</span>
-              </button>
-
-              {/* USDT Button */}
-              <button
-                onClick={() => handleTokenSelection('USDT')}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full border-2 transition-colors ${
-                  selectedToken === 'USDT'
-                    ? 'bg-[#22c55e] border-transparent'
-                    : 'bg-white text-[#22c55e] border-[#22c55e] hover:bg-[#e9f8ed]' 
-                }`}
-              >
-                <img src="/USDT.svg" alt="USDT Icon" className="w-8 h-8" />
-                <span className="text-2xl font-bold">USDT</span>
-              </button>
-        </div>
-
-           {/* Pay with ETH and Receive $STARS */}
-           <div className="mb-2 flex justify-between text-black font-bold">
-            <span>Pay with ETH</span>
-            <button
-                className="text-black font-bold py-1 px-2 rounded"
-                onClick={() => {
-                  const formattedValue = selectedToken === "ETH" 
-                    ? parseFloat(nativeFormatted).toFixed(3) 
-                    : parseFloat(tokenFormatted).toFixed(3);
-                
-                  setInputValue(parseFloat(formattedValue) === 0 ? '0' : formattedValue);
-                }}
-                
-              >
-                Max
-              </button>
-            <span>Receive $STARS</span>
-          </div>
-          <div className="relative mb-5 flex space-x-4 items-center">
-            {/* ETH Input Box */}
-            <div className="relative w-full">
-              <input
-                type="text"
-                value={inputValue}
-                onChange={handleInputChange}
-                className="w-full rounded-full border-4  border-black bg-[rgb(111,234,255)] p-3 font-bold  placeholder-white focus:outline-none"
-              />
-              <div className="absolute inset-y-0 right-4 flex items-center space-x-2">
-                <img
-                  src={selectedToken === 'ETH' ? '/ETH.svg' : '/USDT.svg'}
-                  alt={selectedToken}
-                  className="h-8 w-8"
-                />
-                
-              </div>
-            </div>
-
-            {isModalOpen && (
+{isModalOpen && (
               <div className="absolute top-full w-full" ref={modalRef}>
                 <PaymentModal 
                   onSelectToken={handleSelectToken} 
@@ -378,21 +348,15 @@ function App() {
               </div>
             )}
 
-            {/* STARS Input Box */}
-            <div className="relative w-full">
-              <input
-                type="text"
-                value={totalStars}
-                className="w-full rounded-full border-4 border-black bg-[rgb(111,234,255)] p-3 font-bold placeholder-white focus:outline-none"
-              />
-              <div className="absolute inset-y-0 right-4 flex items-center space-x-2">
-                <img src="/star.png" alt="$STARS" className="h-8 w-8" />
-              </div>
-            </div>
-          </div>
+      <input
+        type="number"
+        value={totalStars}
+        readOnly
+        className=" outline-none bg-transparent border-0 myriadpro p-0 text-[1.1rem] w-[38%] 2xl:text-[1.2rem] 2xl:w-[38%]"
+      ></input>
+    </div>
 
-          {/* Connect Wallet Button */}
-          {address ? (
+        {address ? (
             <>
               {/* when the user is connected */}
               <div className="flex flex-col items-center space-y-4">
@@ -442,28 +406,34 @@ function App() {
                   )}
             </>
           ) : (
-            <div className="flex space-x-4 items-center justify-center">
-              {/* CONNECT WALLET Button */}
-              <button
-                className="w-full rounded-full border-4 border-black bg-[rgb(111,234,255)] p-3 font-bold text-black"
-                onClick={() => open()}
-              >
-                CONNECT WALLET
-              </button>
 
-              {/* Don't have a wallet? Button */}
-              <button
-                className="w-full rounded-full border-4 border-black bg-[rgb(111,234,255)] p-3 font-bold text-black"
-                onClick={() => alert('Redirecting to wallet creation options...')}
-              >
-                Don't have a wallet?
-              </button>
-            </div>
-
-          )}
-
-        </div>
+    <div className="absolute flex justify-between max-[522px]:text-[0.6rem] w-[52%] top-[74%] left-[24%] text-[0.76rem] 2xl:w-[52%] 2xl:top-[74%] 2xl:left-[24%] 2xl:text-[0.8rem]">
+      <div className="myriadpro relative rounded-[1rem] w-[45%]" onClick={() => open()}>
+        <img src="button/button1.png"></img>
+        <span className="absolute cursor-pointer hover:bg-[#1a82ab] top-[9%] left-[2%] px-[14%] py-[2.7%] 2xl:top-[10%] 2xl:left-[2%] 2xl:px-[15%] 2xl:py-[3%]  rounded-[2rem]">
+          Connect Wallet
+        </span>
       </div>
+      <div className="myriadpro relative rounded-[1rem] w-[45%]" onClick={() => alert('Redirecting to wallet creation options...')}>
+        <img src="button/button1.png"></img>
+        <span className="absolute top-[9%] left-[2%] px-[7.7%] py-[2.6%] 2xl:top-[10%] 2xl:left-[2%] rounded-[2rem] 2xl:px-[9.5%] 2xl:py-[3%] cursor-pointer hover:bg-[#1a82ab]">
+          Don't Have Wallet
+        </span>
+      </div>
+    </div>
+    )}
+  </div>
+
+
+
+
+
+
+
+
+     
+      
+      </>
   );
 }
 
