@@ -2,6 +2,7 @@ import { useAtom } from "jotai";
 import { LinkIcon } from "./linkIcon";
 import { NavButton } from "./navButton";
 import { navHiddenAtom } from "@/store";
+import { Buybutton } from "./buyicon";
 
 export const HiddenBar = () => {
   const [show, setShow] = useAtom<boolean>(navHiddenAtom);
@@ -18,17 +19,16 @@ export const HiddenBar = () => {
           onClick={() => setShow(false)}
         />
         <div className="w-[250px] flex flex-col items-center justify-around h-full">
-          <NavButton label="Stacking" />
           <NavButton label="About" />
           <NavButton label="How To Buy" />
           <NavButton label="Tokenomics" />
           <NavButton label="Roadmap" />
-          <NavButton label="FWB" />
           <NavButton label="FAQs" />
           <NavButton label="White Paper" />
           <div className="flex gap-5">
             <LinkIcon />
           </div>
+          <Buybutton />
         </div>
       </div>
     </>
