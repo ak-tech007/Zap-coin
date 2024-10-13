@@ -4,12 +4,13 @@ import { useAtom } from "jotai";
 export const MenuIcon = () => {
   const [, setShow] = useAtom<boolean>(navHiddenAtom);
   return (
-    <>
-      <img
+    <><div className="min-[1380px]:hidden pr-16">
+        <img
         src="/icon/menu.png"
-        className="absolute top-5 right-44 w-16 cursor-pointer min-[1700px]:hidden max-sm:right-3 "
+        className="w-16 h-auto cursor-pointer"
         onClick={() => setShow(true)}
       />
+    </div>
     </>
   );
 };
